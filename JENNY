@@ -1,0 +1,279 @@
+  #include<iostream>
+#include<cmath>
+#include<conio.h>
+using namespace std;
+void add()
+{
+ int a,b,sum;
+ printf("Want To Add Some Numbers: ");
+ scanf("%d + %d",&a,&b);
+ sum=a+b;
+ printf("Sum is %d",sum);
+}
+void subtract()
+{
+ int a,b,subtract;
+ printf("Want To Subtract Some Numbers: ");
+ scanf("%d - %d",&a,&b);
+ subtract=a-b;
+ printf("Subtract is %d",subtract);
+}
+
+void multiply()
+{
+ int a,b,multiply;
+ printf("Want To Multiply Some Numbers: ");
+ scanf("%d * %d",&a,&b);
+ multiply=a*b;
+ printf("Multiply is %d",multiply);
+}
+void divide()
+{
+ int a,b,divide;
+ printf("Want To Divide Some Numbers: ");
+ scanf("%d / %d",&a,&b);
+ divide=a/b;
+ printf("Divide is %d",divide);
+}
+void remainder()
+{
+ int a,b,remainder;
+ printf("Want To Find Remainderof Some Numbers: ");
+ scanf("%d % %d",&a,&b);
+ remainder=a%b;
+ printf("Remainder is %d",remainder);
+}
+void comparetwo()
+{
+ int a,b;
+ if(a>b)
+   cout>>a>>"is greater than">>b;
+ else
+   cout>>b>>"is greater than">>a;
+}
+void comparethree()
+{
+ int a,b,c;
+ if(a>b && a>c)
+   cout>>a>>"is greatest";
+ else if(b>c && b>a)
+   cout>>b>>"is greatest";
+ else
+   cout>>c>>"is greatest";
+}
+void leapyear()
+{
+     int year;
+    cout << "Enter a year: ";
+    cin >> year;
+    if (year % 4 == 0)
+    {
+        if (year % 100 == 0)
+        {
+            if (year % 400 == 0)
+                cout << year << " is a leap year.";
+            else
+                cout << year << " is not a leap year.";
+        }
+        else
+            cout << year << " is a leap year.";
+    }
+    else
+        cout << year << " is not a leap year.";
+}
+void evenodd()
+{
+ int a;
+ if(a%2 == 0)
+   cout<<"Number is Even";
+ else
+   cout<<"Number is Odd";
+}
+void prime()
+{
+ int a;
+ cin>>a;
+ for(int i=0,i<sqrt(a),i++)
+  {
+   
+  }
+}
+void sumnatural()
+{
+ int n,sum;
+ cout<<"Enter a Number to Find the Sum: ";
+ cin>>n;
+ sum=(n*(n+1))/2;
+ cout<<"Sum is"<<sum;
+
+}
+void vowelconst()
+{
+ char c;
+ cin>>c;
+ int islowercase,isuppercase;
+ islowercase = (c=='a'||c=='e'||c=='i'||c=='o'||c=='u');
+ isuppercase = (c=='A'||c=='E'||c=='I'||c=='O'||c=='U');
+ if(islowercase || isuppercase)
+   cout<<"Alphabet is Vowel";
+ else
+   cout<<"Alphabet is Consonant";
+}
+void geometry()
+{
+
+ break;
+
+}
+void areas()
+{
+ int n;
+ cout<<"NO of Sides: ";
+ cin>>n;
+ switch(n)
+ {
+  case 1:trapezium();break;
+  case 3:triangle();break;
+  case 4:square();break;
+  case 5:pentagon();break;
+  case 6:hexagon();break;
+  case 7:heptagon();break;
+  case 8:octagon();break;
+  case 9:nonagon();break;
+  case 10:decagon();break; 
+  case 11:ellipse();break;
+ }
+}
+void volume()
+{
+ int n;
+ cin>>n;
+ switch(n)
+ {
+  case 1:cylinder();break;
+  case 2:sphere();break;
+  case 3:cone();break;
+  case 4:pyramid();break;
+  case 5:parabloid();break;
+  case 6:hyperbloid();break;
+  case 7:cube();break;
+  case 8:cuboid();break;
+  case 9:toroid();break;
+  case 10:prism();break;
+  case 11:octahedron();break;
+  case 12:dodecahedron();break;
+  case 13:icosahedron();break;
+  case 14:icosahedron();break;
+  case 15:spheroid();break;
+  case 16:ellipsoid();break;
+
+
+
+ }
+}
+void multiplicationtable()
+{
+ int n;
+ cout<<"Enter number N of which you want table: ";
+ cin>>n;
+ for(int i=1,i<11,i++)
+ {
+  cout<<n<<"*"<<i<<" = "<<n*i;
+ }
+}
+void quadratic()
+{
+ float a,b,c,x1,x2,sum,multi;//a!=0
+ cout<<"Enter the a and b of quadratic equation: ";
+ cin>>a>>b;
+ sum=-b/a;
+ multi=c/a;
+ x1=(-b+sqrt(b*b-4*a*c))/2;x2=(-b-sqrt(b*b-4*a*c))/2;
+ cout<<"Sum of roots is"<<sum;
+ cout<<"Multiplication of roots is"<<multi;
+ cout<<"Roots of quadratic Equation are"<<x1<<x2;
+ if(b*b>4*a*c)
+  cout<<"Real Roots both";
+ else if(b*b<4*a*c)
+  cout<<"Complex Roots both";
+ else
+  cout<<"Single root";//anothrt condition if deternament is a square
+ scanf("Different Representation => %d(x-%d)(x-%d)=0",a,x1,x2);
+}
+void sequence()
+{int n;
+ cin>>n;
+ switch(n)
+ {
+ case 1://aritmetic progression
+        int a(n),a,n,d,sum;
+        a(n)=a+(n-1)*d;
+        cout<<"Enter the first Number: ";
+        cin>>a;
+        cout<<"Enter the Difference: ";
+        cin>>d;  
+        cout<<"Enter the N: ";
+        cin>>n;
+        cout<<"Last Number is "<<a(n);
+        sum=(n*(2*a+(n-1)*d))/2;
+        cout<<"Sum is "<<sum;
+        cout<<"Arithmetic Mean is "<<sum/n;
+        break;
+ case 2://geometric progression
+        int a(n),a,r,n;
+        cout<<"Enter the First Number: ";
+        cin>>a;
+        cout<<"Enter the Common Ratio: ";
+        cin>>r;
+        cout<<"Enter the N: ";
+        cin>>n;
+        a(n)=a*pow(r,n-1);
+        cout<<"Last Number is: "<<a(n);
+        a(n)=a;
+        for(int i=1,i<n,i++);
+        {
+         cout>>a*
+        }
+ case 3://harmonic progression
+        int a(n),a,n;
+        
+        
+        
+}
+int main()
+{
+ int n;
+ cin>>n;
+ switch(n)
+ {
+  case 1:add(); break;//done
+  case 2:subtract();break;//done
+  case 3:multiply();break;//done
+  case 4:divide();break;//done
+  case 5:remainder();break;//done
+  case 6:comparetwo();break;//done
+  case 7:comparethree();break;//done
+  case 8:leapyear();break;//done
+  case 9:areas();break;
+  case 10:volume();break;
+  case 11:sequence();break;//incomplete
+  case 12:quadratic();break;//near done
+  case 13:permutation();break;
+  case 14:probablity();break;
+  case 15:stats();break;
+  case 16:vector3d();break;
+  case 17:trignometry();break;
+  case 18:diffcalculus();break;
+
+  case 19:intcalculus();break;
+  case 20:matricesdet();break;
+  case 21:geometry();break;
+  case 22:evenodd();break;//done
+  case 23:prime();break;
+  case 24:sumnatural();break;//done
+  case 25:vowelconst();break;//done
+  case 26:multiplicationtable();break;//done
+  case 27:graph();break;
+  case 28:coordinategeometry();break;
+ }
+}
