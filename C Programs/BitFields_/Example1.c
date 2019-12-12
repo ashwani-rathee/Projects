@@ -23,6 +23,9 @@ int main()
 	printf("Date is %d/%d/%d", dt.d, dt.m, dt.y); 
 	return 0; 
 }
+//output
+//Size of date is 8 bytes
+//Date is 31/12/2014
 
 /*
 #include <stdio.h> 
@@ -42,3 +45,6 @@ int main()
 	printf("Date is %d/%d/%d", dt.d, dt.m, dt.y); 
 } 
 */
+//output
+//Size of date is 12 bytes
+//Date is 31/12/2014
