@@ -1,0 +1,23 @@
+//author:ashwani rathee
+//date:19/12/19
+//topic:Find the missing number in an array of 1 to N numbers
+//Complexity:O(1)
+
+#include<stdio.h>
+
+int main(void)
+{
+ int n;
+ printf("Enter the total no of numbers: ");
+ scanf("%d",&n);
+ int a[n];//declare array
+ printf("Enter 1 to %d by leaving one number",n);
+ int i,sum=0;
+ for(i=0;i<n-1;i++)
+ {
+  scanf("%d",&a[i]);
+  sum +=a[i];//so all others the  one missing will be inside the sum
+ }
+ printf("%d is the missing number",(n*(n+1)/2)-sum);//important line
+ return 0;
+}
