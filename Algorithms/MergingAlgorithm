@@ -1,0 +1,39 @@
+//author:ashwani rathee
+//date:19/12/19
+//TOPIC:Merging Algorithm
+//Order of merging is o(m+n) where m+n is size of final array
+#include<stdio.h>
+
+//function declaration
+void merge(int *a,int m,int *b, int n,int *c);
+int main()
+{
+ //var declaration
+ int a[3] ={1,4,6},b[4]={2,3,5,7},c[7],i;
+ //merge
+ merge(a,3,b,4,c);
+ //output
+ for(i=0;i<7;i++)
+  printf("%d",c[i]);
+ printf("\n Merge Complete.\n");
+ return 0;
+}
+//function defintion 
+void merge(int *a,int m,int *b,int n,int *c)
+{
+ int pa=0,pb=0,pc=0;
+ while(pa<m && pb<n)
+ {
+  if(a[pa]<b[pb])
+   c[pc++]=a[pa++];//putting value in array
+  else
+   c[pc++]=b[pb++];
+ }
+ if(pa ==m)
+  while(pb<n)
+   c[pc++]=b[pb++];
+ else
+  while(pa<m)
+   c[pc++]=a[pa++];
+}
+   
