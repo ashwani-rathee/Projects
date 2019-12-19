@@ -1,0 +1,13 @@
+//author:ashwani rathee
+//date:19/12/19
+//topic:Sound Creation or to say ring a bell
+
+#include<stdio.h>
+
+int main(void)
+{
+  printf("\a \a \a");//somehow this parts create noise
+  return 0;
+}
+
+
