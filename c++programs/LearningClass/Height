@@ -1,0 +1,34 @@
+//author:ash
+//topic:height non inline
+//date:13-2
+#include<iostream>
+using namespace std;
+class height
+{
+ public:
+  int heightcm;
+  float heightin;
+  float heightft;
+ void input();
+ void display();
+};
+void height::input()
+ {
+  cout<<"Enter the height in cm";
+  cin>>heightcm;
+  heightin=heightcm/2.54;
+  heightft=heightcm/30.48;
+ }
+void height::display()
+ {
+  cout<<"Your Height in inches is "<<heightin<<endl;
+  cout<<"YOur Height in cm is "<<heightcm<<endl;;
+  cout<<"YOur height in ft is "<<heightft<<endl;
+ }
+int main()
+{
+ height h1,h2;
+ h1.input();
+ h1.display();
+ return 0;
+}
