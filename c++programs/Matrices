@@ -1,0 +1,125 @@
+//author:ash
+//topic:matrices
+#include<iostream>
+#include<stdlib.h>
+#include<math.h>
+#include<iomanip>
+#include<string.h>
+using namespace std;
+int arr[4][4];
+char HORZ = '-';
+char vert = '|';
+int main()
+{
+  char HORZ = '-';
+  char vert = '|';
+  int arr[3][3];
+  int brr[3][3];
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+   {
+    arr[i][j]=0;
+   }
+  }
+  cout<<"WELCOME TO THE MATRICE GAME"<<endl;
+  cout << string( 40, HORZ ) << '\n';
+  //arr input
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+   {
+    cout<<"ARR["<<i<<"]["<<j<<"]: ";
+    cin>>arr[i][j];
+   }
+  }
+  cout << string( 40, HORZ ) << '\n';
+  //brr input
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+   {
+    cout<<"BRR["<<i<<"]["<<j<<"]: ";
+    cin>>brr[i][j];
+   }
+  }
+  cout << string( 40, HORZ ) << '\n';
+//Now print those matrice
+ cout<<"Printing the matrice A"<<endl;
+   cout << string( 40, HORZ ) << '\n';
+ for(int i=0;i<=2;i++)
+ {
+  cout<<"|";
+  for(int j=0;j<=2;j++)
+  {
+   cout<<setw(5)<<arr[i][j]<<setw(5)<<"|";
+  }
+  cout<<endl;
+  cout << string( 40, HORZ ) << '\n';
+ }
+   cout << string( 40, HORZ ) << '\n';
+  cout<<"Printing the matrice B"<<endl;
+ //print the board matrice 2
+  cout << string( 40, HORZ ) << '\n';
+  for(int i=0;i<=2;i++)
+ {
+  cout<<"|";
+  for(int j=0;j<=2;j++)
+  {
+   cout<<setw(5)<<brr[i][j]<<setw(5)<<"|";
+  }
+  cout<<endl;
+  cout << string( 40, HORZ ) << '\n';
+ }
+ //now we sum of the matrices using another matrice c;
+ int crr[3][3];
+ cout<<"SUM CASE"<<endl;
+   cout << string( 40, HORZ ) << '\n';
+   //crr input
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+   {
+    cout<<"CRR["<<i<<"]["<<j<<"]: "<<arr[i][j]+brr[i][j]<<endl;
+   }
+  }
+  cout << string( 40, HORZ ) << '\n';
+
+   for(int i=0;i<=2;i++)
+ {
+  cout<<"|";
+  for(int j=0;j<=2;j++)
+  {
+   cout<<setw(5)<<crr[i][j]<<setw(5)<<"|";
+  }
+  cout<<endl;
+  cout << string( 40, HORZ ) << '\n';
+ }
+  cout<<"Transpose case"<<endl;
+    cout << string( 40, HORZ ) << '\n';
+ //print the board matrice 3 after transpose of it
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+   {
+   int t;
+   t=arr[i][j];
+   arr[i][j]=arr[j][i];
+   arr[j][i]=t;
+   }
+  }
+  cout << string( 40, HORZ ) << '\n';
+  for(int i=0;i<=2;i++)
+ {
+  cout<<"|";
+  for(int j=0;j<=2;j++)
+  {
+   cout<<setw(5)<<crr[i][j]<<setw(5)<<"|";
+  }
+  cout<<endl;
+  cout << string( 40, HORZ ) << '\n';
+ }
+ return 0;
+}
+
+
