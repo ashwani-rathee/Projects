@@ -1,0 +1,46 @@
+//author:ashwani
+//topic:finding sum of series:1+2^2/2!+3^3/3!............
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int factorial(const int &p)
+{
+ int fact=1;
+ for (int i=1;i<=p;i++)
+ {
+ fact=fact*i;
+ }
+ return(fact);
+};
+int power(const int &r)
+{
+ int power=1;
+ power=pow(r,r);
+ return(power);
+};
+int main()
+{
+ int n;
+ show<<"Kitne tak print karna h: ";
+ take>>n;
+
+ show<<"Sum of";
+ for(int i=1;i<=n;i++)
+ {
+  show<<"pow("<<i<<","<<i<<")/"<<i<<"!"<<"+";
+ };
+ show<<"............";
+ show<<endl;
+ int sum=0;
+ for(int i=1;i<=n;i++)
+ {
+
+  int powerside=power(i);
+  int factorialside=factorial(i);
+  sum=sum+(powerside/factorialside);
+ }
+ show<<sum;
+ return 0;
+}
