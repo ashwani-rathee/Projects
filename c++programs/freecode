@@ -75,5 +75,13 @@
 //something to do with time optimization
  ios::sync_with_stdio(false);
  cin.tie(nullptr);
-
+//
+//scope error
+  int arg1 ;
+ arg1 = -1;
+ int x , y , z ;
+ char myDouble = ’5 ’;
+ char arg1 = ’A ’;
+ cout << arg1 << " \ n " ;
+//
    
