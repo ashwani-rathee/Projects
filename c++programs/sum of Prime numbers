@@ -1,0 +1,31 @@
+//author:ashwani
+//topic:summation of 1st 10 prime numbers
+#include<iostream>
+#include"arithmetic.h"
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+bool check_prime(int &r);
+int main()
+{
+ int sum=0;int counter=0;
+ int n=100;
+ for(int i=1;i<=n;i++)
+ {
+  bool flag=false;
+  //check_prime(n) ? flag=true : flag=false; //special case
+  flag=check_prime(i);
+  if(flag==true)
+  {
+   sum=sum+i;
+   counter++;//show<<counter<<endl;
+   if(counter==20)
+   {
+    break;
+   }
+   //show<<sum<<endl;
+  }
+ };
+ show<<"final ="<<sum<<endl;
+ return 0;
+}
