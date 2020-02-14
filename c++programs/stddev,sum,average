@@ -1,0 +1,28 @@
+//author:ashwani
+//author:ashwani
+//topic:standard deviation,sum,average
+#include<iostream>
+#include"arithmetic.h"
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int sumfn(int par[],int size);
+int main()
+{
+ int arr[5];
+ for(int i=0;i<=4;i++)
+ {
+  show<<"arr{"<<i<<"} = ";
+  take>>arr[i];
+ }
+ int sum=0;
+ sum=sumfn(arr,5);
+ show<<"Sum of these five numbers : "<<sum<<endl;
+ int avg=0;
+ avg=avgfn(arr,5);
+ show<<"Avg of these five no.: "<<avg<<endl;
+ int mean=avg;
+ int standdev=standarddevfn(arr,5,mean);
+ show<<"Standard deviation of these nos. is "<<standdev<<endl;
+ return 0;
+}
