@@ -1,0 +1,50 @@
+//author:ashwani
+//print sum of first n prime numbers
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int factorial(int p)
+{
+ int fact=1;
+ for (int i=1;i<=p;i++)
+ {
+ fact=fact*i;
+ }
+ return(fact);
+}
+bool check_prime(int r)
+{
+ bool b;
+ for(int i=1;i<=r;i++)
+ {
+  int d;
+  d=r%i;
+  if(d=0)
+  {
+   bool b = true;
+   break;
+  }
+ }
+ return b;
+}
+int main()
+{
+ bool check_prime(int r);
+ int n;
+ show<<"Enter the number: ";
+ take>>n;
+ int sum=0;
+ for(int i=2;i<=n;i++)
+ {
+  bool flag=false;
+  flag=check_prime(i);
+  if(flag==true)
+  {
+   sum=sum+i;
+  }
+ }
+ show<<sum;
+ return 0;
+}
