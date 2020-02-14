@@ -1,0 +1,50 @@
+//author:ashwani//structure discussion
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+//when called int &x=a;and int &y=b will be executed
+struct student
+{
+ int rollno;
+ int age;
+ int semester;
+};
+//struct student stu=stu1;
+void input(struct student stu)
+{
+ take>>stu.rollno;
+ take>>stu.age;
+ take>>stu.semester;
+}
+//struct student &stu=stu1;//creates and vlnerabilty by giving
+void input(struct student &stu)
+{
+ take>>stu.rollno;
+ take>>stu.age;
+ take>>stu.semester;
+}
+//best doesn't allow modification but allows call by reference
+void input(const struct student &stu)
+{
+ cin>>stu.rollno;
+ take>>stu.age;
+ take>>stu.semester;
+}
+int main()
+{
+ struct student stu1;
+ input(stu1);
+ return 0;//0 represent success,-1 ris fail//return  value to os
+}
+//void input(int par[500])
+/*{
+ for(int i=0;i=499;i++)
+ {
+ take<<par[50]
+ }
+}
+in main
+int arr[500];
+ input(arr);//here it is call by reference*/
