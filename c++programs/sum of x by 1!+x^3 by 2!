@@ -1,0 +1,34 @@
+//author:ashwani
+//topic:sum of x/1!+x^3/2!+x^5/3!.....
+#include<iostream>
+#include"arithmetic.h"
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int main()
+{
+ int x,n;
+ show<<"Enter the value of x: ";
+ take>>x;
+ show<<"Enter the number of the terms you want to include: ";
+ take>>n;
+ show<<"Sum of";
+ for(int i=1;i<=n;i++)
+ {
+  show<<x<<"^"<<2*i-1<<"/"<<i<<"!"<<"+";
+ };
+ show<<"............";
+ show<<endl;
+ float sum=0;
+ for(int i=1;i<=n;i++)
+ {
+  int upper=0;
+  int z=2*i-1;
+  upper=power2(x,z);
+  show<<upper<<endl;
+  int factorialside=factorial(i);
+  sum=sum+(upper/(double)factorialside);//so this need this kind of casting
+ }
+ show<<sum;
+ return 0;
+}
