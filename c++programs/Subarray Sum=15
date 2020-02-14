@@ -1,0 +1,63 @@
+//author:ashwani rathee
+//date:16/1/20
+//topic:finding a subarray with sum 15
+
+#include<iostream>
+#include<string>
+#include<cmath>
+
+using namespace std;
+
+int main()
+{
+ char HORZ = '-';       
+ char vert = '|';  
+ cout << string( 40, HORZ ) << '\n';
+ long long int i,n,a[10],sum=0;
+ for(int i=0;i<=9;i++)
+ {
+  cout<<vert<<"a["<<i<<"]:";
+  cin>>a[i];
+  cout << string( 40, HORZ ) << '\n';
+ }
+ for(int i=0;i<=9;i++)
+ {
+  cout<<a[i];
+ }
+ cout<<"\n";
+ cout << string( 40, HORZ ) << '\n';
+ cout<<"\n";
+ int t=8;
+ i=0;
+ while(t--)
+ {
+  for(n=i;n<=i+3;n++)
+  {
+   sum=sum+a[n];
+  }
+  if(sum==15)
+   {
+    cout << string( 40, HORZ ) << '\n';
+    cout<<vert;
+    for(int i=n-3;i<=n;i++)
+    {
+     cout<<"+"<<a[i];
+    }
+    cout<<"=15"<<endl;
+    cout << string( 40, HORZ ) << '\n';
+    cout<<vert<<"The Starting Index is "<<n-3<<endl;
+    cout<<vert<<"The Finishing Index is "<<n<<endl;
+    cout << string( 40, HORZ ) << '\n';
+    break;
+   }
+  else if(sum!=15)
+  {
+    cout<<vert<<"Array from Index"<<n-3<<" to "<<n<<" isn't the one"<<endl;
+    cout << string( 40, HORZ ) << '\n';
+  }
+  sum=0;
+  i++;
+ }
+ return 0;
+}
+
