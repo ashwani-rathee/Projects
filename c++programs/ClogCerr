@@ -1,0 +1,21 @@
+//author:ashwani
+//topic:
+#include<iostream>//contains istream and ostream
+#include<string>
+using namespace std;
+ //want to use clog and cerr in c++
+int main()
+{
+	cout<<"Hello World!!\n";
+	cout<<"Enter Two Numbers:"<<endl;
+	int v1,v2,sum=0;
+	cin>>v1>>v2;
+	sum=v1+v2;
+	cout<<"The sum of "<< v1 <<" and "<< v2 <<" is "<<sum<<endl;
+	cout<<"Enter Two Numbers:"<<endl;
+	cin>>v1>>v2;
+	cout<<"The Multiplication of "<< v1 <<" and "<< v2 <<" is "<<v1*v2<<endl;
+	//endl is called a manipulator
+	return 0;
+}
+///*dd/*fef*/*/
