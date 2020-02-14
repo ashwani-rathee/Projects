@@ -72,7 +72,8 @@
   scanf ("%x",&i);
   printf ("You have entered %#x (%d).\n",i,i);
 //
-
-
+//something to do with time optimization
+ ios::sync_with_stdio(false);
+ cin.tie(nullptr);
 
    
