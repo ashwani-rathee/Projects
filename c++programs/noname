@@ -1,0 +1,27 @@
+//author:ashwani
+//topic:sum of factorial 
+#include<bits/stdc++.h>
+using namespace std;
+void func(int n)
+{
+ int r,sum=0;
+ while(n!=0)
+ {
+     r=n%10;
+  sum=sum+r;
+     n=n/10;
+ }
+  cout<<sum;
+}
+int main()
+{
+ int t,sum=0;
+      cin>>t;
+ while(t--)
+ {
+  long int n;
+      cin>>n;
+     func(n);
+ }
+    return 0;
+}
