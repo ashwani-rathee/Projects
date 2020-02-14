@@ -1,0 +1,22 @@
+//author:ash
+//topic:setw something
+#include<iostream>
+#include<iomanip>
+using namespace std;
+//typedef int* intptr;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int main()
+{
+ //chained assgnment
+ //float a=b=32;//shows b not declared so it shows error
+ //float a=32=b;//b not declared in scope
+ //float a=32,b=a;//shows redeclaration of float a
+ //embeded assignment
+ float a=32,b=23;
+ int y=10;
+ int x=y+10;
+ //
+ int z=(y=10)+10;//`works well
+ return 0;
+}
