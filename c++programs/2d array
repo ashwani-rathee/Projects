@@ -1,0 +1,47 @@
+//author:ashwani
+//topic:2dimensional array
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+  char HORZ = '-';
+  char vert = '|';
+ int arr[3][3];
+ cout << string( 40, HORZ ) << '\n';
+ for(int i=0;i<=2;i++)
+ {
+  for(int j=0;j<=2;j++)
+  {
+   cout<<"ARR["<<i<<"]["<<j<<"]: ";
+   cin>>arr[i][j];
+  }
+ }
+   cout << string( 40, HORZ ) << '\n';
+ for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+    {
+     cout<<arr[i][j]<<"   ";
+    }
+   cout<<endl;
+  }
+  cout << string( 40, HORZ ) << '\n';
+  int maxy=0;
+  int mini=arr[0][0];
+  for(int i=0;i<=2;i++)
+  {
+   for(int j=0;j<=2;j++)
+    {
+     if(arr[i][j]>=maxy)
+      maxy=arr[i][j];
+     if(arr[i][j]<mini)
+      mini=arr[i][j];
+    }
+  }
+ cout<<"Largest element is "<<maxy<<endl;
+ cout << string( 40, HORZ ) << '\n';
+ cout<<"Smallest element is "<<mini<<endl;
+ return 0;
+}
