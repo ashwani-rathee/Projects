@@ -1,0 +1,27 @@
+//author:ashwani//call by reference
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+//when called int &x=a;and int &y=b will be executed
+void swap(int &x, int &y)
+{
+ int t;
+ t=x;
+ x=y;
+ y=t;
+}
+int main()
+{
+ int b=10;
+ int c=12;
+ swap(b,c);
+ show<<"b="<<b<<endl;
+ show<<"c="<<c<<endl;
+ int &a=b;//shwos error as coflicting
+ swap(a,b);//no sepreate memory allocated so a and b will return b ,& is refrence variable
+ show<<"a="a<<endl;
+ show<<"b="<<b;
+ return 0;//0 represent success,-1 ris fail//return  value to os
+}
