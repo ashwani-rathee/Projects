@@ -1,0 +1,21 @@
+//author:ashwani//swapping
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+void swap(int x,int y)
+{
+ int t=x;
+ x=y;
+ y=t;
+}
+int main()
+{
+ int a,b;
+ a=10;
+ b=20;
+ swap(a,b);
+ show<<a<<b;
+ return 0;//0 represent success,-1 ris fail//return  value to os
+}
