@@ -1,0 +1,28 @@
+//author:ashwani
+//topic:setw something
+#include<iostream>
+#include<iomanip>
+using namespace std;
+//typedef int* intptr;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int main()
+{
+ int a,b,c;
+ a=3276;
+ b=52;
+ c=213;
+ cout<<"A="<<setw(10)<<a<<endl;
+ cout<<"B="<<setw(10)<<b<<endl;//can use '\n' instead
+ cout<<"C="<<setw(10)<<c<<endl;
+ //simple without setw()
+ cout<<"A="<<a<<endl;
+ cout<<"B="<<b<<endl;//can use '\n' instead
+ cout<<"C="<<c<<endl;
+ //character of vector string pe bhi chalta h
+ //setw() in front of the all
+ cout<<setw(10)<<"Interest="<<setw(10)<<a<<endl;
+ cout<<setw(10)<<"Principal="<<setw(10)<<b<<endl;//can use '\n' instead
+ cout<<setw(10)<<"Amount="<<setw(10)<<c<<endl;
+ return 0;
+}
