@@ -1,0 +1,43 @@
+//author:ash
+//topic:distance non inline
+//date:13-2
+#include<iostream>
+using namespace std;
+class distance1
+{
+ public:
+  int distcm;
+  float distkm;
+  float distm;
+ void getdata();
+ void displaydata();
+ void setdata(int d);
+};
+void distance1::getdata()
+ {
+  cout<<"Enter the distance in cm";
+  cin>>distcm;
+  distkm= (float)distcm/100000;
+  distm=(float)distcm/100;
+ }
+void distance1::displaydata()
+{
+  cout<<"Distance in cm is "<<distcm<<endl;
+  cout<<"Distance in m is "<<distm<<endl;
+  cout<<"DIstance in km is "<<distkm<<endl;
+ }
+void distance1::setdata(int d)
+{
+ distcm=d;
+ distkm=(float)distcm/100000;
+ distm=(float)distcm/100;
+ displaydata();
+}
+int main()
+{
+ distance1 d1;
+ d1.getdata();
+ d1.displaydata();
+ d1.setdata(300);
+ return 0;
+}
