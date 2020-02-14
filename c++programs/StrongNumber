@@ -1,0 +1,49 @@
+//author:ashwani rathee
+//date:16/1/20
+//topic:Checking if a no is strong no or not
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int factsum(int r)
+{
+ int sum=1;
+ for(int i=1;i<=r;i++)
+ {
+  sum=sum*i;
+ }
+ return sum;
+}
+
+int main()
+{
+  char HORZ = '-';       
+  char vert = '|';  
+  int n,p,r,sum;
+  cout << string( 40, HORZ ) << '\n';
+  cout<<"Enter the number: ";
+  cin>>n;
+  cout << string( 40, HORZ ) << '\n';
+  p=n;
+  while(p!=0)
+  {
+  r=p%10;
+  cout<<"Digit is "<<r<<endl;
+  factsum(r);
+  sum=sum+factsum(r);
+  p=p/10;
+  }
+  p=sum;
+  if(n==p)
+  {
+  cout << string( 40, HORZ ) << '\n';
+  cout<<"It is a strong no.\n";
+  }
+  else
+  {
+  cout << string( 40, HORZ ) << '\n';
+  cout<<"It is not a strong no.\n";
+  }
+   return 0;
+}
