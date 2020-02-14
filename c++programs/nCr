@@ -1,0 +1,50 @@
+//author:ashwani
+//topic:finding nCr
+//date:1.2
+#include<iostream>
+#include<math.h>
+using namespace std;
+std::ostream& show = std::cout;
+std::istream& take = std::cin;
+int factorial(const int &p)
+int main()
+{
+ int factorial(const int &p);
+ int n,r;
+ show<<"Enter the value of n & r: "<<endl;
+ show<<"N = ";
+ take>>n;
+ show<<"R = ";
+ take>>r;
+ if(n>=r)
+ {
+ int nfact=1;
+ nfact=factorial(n);//only one variable can be modified using call by value.
+ show<<"N-factorial= "<<nfact<<endl;
+ int rfact=1;
+ rfact=factorial(r);
+ show<<"R-factorial= "<<rfact<<endl;
+ int nrfact=1;
+ nrfact=factorial(n-r);
+ show<<"N-R factorial= "<<nrfact<<endl;
+ int ans=factorial(n)/(factorial(r)*factorial(n-r));
+ show<<"Answer of nCr="<<ans<<endl;
+ /*int nfact=1;
+ forr(int i=1;i<=n;i++)
+ {
+  nfact=nfact*i;
+ }
+   int rfact=1;
+ for(int i=1;i<=r;i++)
+ {
+  rfact=rfact*i;
+ }
+ int nrfact=1;
+ for (int i=1;i<=n-r;i++)
+ {
+  nrfact+=nfact*i;
+ }*/
+ }
+ return 0;
+}
+
