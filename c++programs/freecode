@@ -44,7 +44,22 @@
   i++;
  }while(i<=n); 
 //
- 
+//multiply
+   int v1,v2;
+    cout<<"enter 2 nos:"<<"\n";
+        cin>>v1>>v2;
+        cout<<"sum"<<v1<<v2<<"is"<<v1*v2<<"\n";
+//
+//cascading example
+ float num1,num2,sum,avg;
+ cout<<"Enter Two Numbers: ";//prompt
+ cin>>num1>>num2;//read//cascading
+ sum=num1+num2;
+ avg=sum/2;
+ cout<<"Sum ="<<sum<<"\n"
+     <<"Avg is"<<avg<<"\n";//this technique is known as cascading
+//
+
 
 
    
