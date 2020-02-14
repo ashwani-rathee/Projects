@@ -1,0 +1,50 @@
+//summing from -10 to 10
+    int sum=0;
+    for(int val=-10;val<=10;++val)
+        sum+=val;
+//
+//to print the number from 10 to 0
+   int x=10;
+   while(x>=0)
+   {cout<<x;
+    --x;}
+   //
+  int x=10;
+  for(int x=10;x>=0;--x)
+      cout<<x;
+  //
+//
+//summing from upper to lower limit
+  int v1,v2;
+  cin>>v1>>v2;
+  int lower,upper;
+  if(v1<=v2){lower=v1;upper=v2;}
+  else{lower=v2;upper=v2;}
+  int sum=0;
+  for(int val=lower;val<=upper;++val)
+    sum+=val;
+  cout <<"sum : "<<sum<<"\n";
+ //
+//square and number using while
+    int i = 0;
+   while (i<=100)
+    {cout<<i<<'\t'<<i*i<<"\n";++i ;}
+//
+//helloworld
+ char name[]="Hello World!!";
+  const char* name;
+ for(int i=1;i<=n;i++)//similarly code can be written for while loop
+  cout<<name<<endl;
+ //using do while
+  char name[]="Hello World!!";
+ int i=1;
+ do
+ {
+  cout<<name<<endl;
+  i++;
+ }while(i<=n); 
+//
+ 
+
+
+   
