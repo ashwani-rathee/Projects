@@ -1,0 +1,22 @@
+//author:ashwani
+//topic:returning number in words
+#include<iostream>
+#include<string>
+#include"arithmetic.h"
+using namespace std;
+void wordnum(int r);
+int main()
+{
+ int n,r;
+ string s;
+ cout<<"Enter your number: ";
+ cin>>n;
+ for(int i=1;i<=4;i++)
+ {
+  r=n%10;
+  s=wordnum(r);
+  cout<<s<<endl;
+  n=n/10;
+ }
+ return 0;
+}
