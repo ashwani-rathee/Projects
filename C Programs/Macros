@@ -1,0 +1,67 @@
+//author:Ashwani
+//topic:Macros
+#include<stdio.h>
+#include"arithmetic.h"//preposser #spdecial program invoked by compiler
+//Double quotes “ and “ instruct the preprocessor to
+// look into the current folder (current directory).
+#define merge(a, b) a##b
+//The tokens passed to macros can be concatenated using operator ## called Token-Pasting operator.
+#define num 10//macros//preprocessed//no type checking//can lead to error/sideeffects//no checks for compilation error
+#define CUBE(b) b*b*b//usually one-liner
+#define max 100
+#define INCREMENT(x) ++x
+#define MULTIPLY(a, b) a*b
+ //macros can take function like arguments,
+//the arguments are not checked for data type.
+//Macros are typically faster than functions
+// as they don’t involve actual function call overhead.
+// no longer recommended
+//better way in modern compilers that is inline functions and const variable
+//Macro don’t have namespace, so a macro in one section of code can affect other section.
+//Before Compilation, macro name is replaced by macro value in macros
+//During function call, transfer of control takes place
+//Macros are useful when small code is repeated many times
+//Functions are useful when large code is to be written
+//Macros are very powerful and can do things that not even templates,
+// lambdas, constexpr, inlining or whatever future compiler constructs will ever do.
+//generally compilers, or the language, is that it is designed to restrict accidents.
+#define get(a) #a
+#define PRINT(i, limit) while (i < limit) \
+                        { \
+                            printf("GeeksQuiz "); \
+                            i++; \
+                        }
+int number()
+{//this here is a function
+ return 10;
+}
+int cube(int a)
+{
+     return a*a*a;
+}
+int main()
+{
+ printf("%d\n",num);
+ printf("%d\n",number());
+ printf("%d\n", CUBE(1+2));
+ printf("%d", cube(1+2));
+ printf("max is %d", max);
+ char *ptr = "GeeksQuiz";
+ int x = 10;
+ printf("%s ", INCREMENT(ptr));
+ // ptr contains the address and when the
+ //it is incremented data location is incremented
+ //after it only eeksquiz is printed
+ printf("%d", INCREMENT(x)); //prints 11
+ //macro arguments are not evaluated before macro expansion
+ // The macro is expended as 2 + 3 * 3 + 5, not as 5*8
+ printf("%d", MULTIPLY(2+3, 3+5));
+ // Output: 16
+ printf("%d ", merge(12, 34));//1234
+ // GeeksQuiz is changed to "GeeksQuiz"
+ printf("%s", get(GeeksQuiz)); //GeeksQuiz
+  int i = 0;
+    PRINT(i, 3); //GeeksQuiz GeeksQuiz GeeksQuiz
+ return 0;
+}
+
