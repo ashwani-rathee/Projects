@@ -1,0 +1,69 @@
+//author:ash
+//topic:class practice
+//date:12-2
+#include<iostream>
+#include<string.h>
+#include<iomanip>
+
+using namespace std;
+void account::input()
+ {
+  cout<<setw(10)<<"Royal Bank of England"<<setw(10);
+  cout<<"pls Enter Your name : "<<endl;
+  cin>>name;
+  cout<<"Pls Enter your account no : ";
+  cin>>accountno;
+  cout<<"Pls Enter your Account balance :  ";
+  cin>>balance;
+ }
+void account::display()
+ {
+  cout<<"Your Account No. is "<<accountno<<endl;
+  cout<<"Your Account Balance is "<<balance<<endl;
+ }
+void account::withdraw(int r)
+{
+  balance=balance-r;
+   void display();
+ cout<<endl;
+}
+void account::deposit(int r)
+{
+ balance=balance+r;
+ void display();
+ cout<<endl;
+
+}
+void account::transfer(myaccount &c,int 5000 )
+{
+ a2.(balance-5000);
+ a1.(balance+5000);
+ void.display();
+
+}
+class account
+{
+ public:
+  float accountno;
+  float balance;
+  string name;
+  void input();
+  void output();
+  void withdraw();
+  void deposit();
+
+};
+int main()
+{
+ myaccount ankit;
+ myaccount ashwani;
+
+ ankit.input();
+ ankit.display();
+ ankit.withdraw(1000);
+ ankit.display();
+ ankit.deposit(1000);
+ ankit.display;
+ ankit.tranfer(ashwani,transfer)
+ return 0;
+}
