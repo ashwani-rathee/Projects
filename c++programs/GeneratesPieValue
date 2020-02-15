@@ -1,0 +1,24 @@
+#include <cstdlib>
+#include<iostream>
+using namespace std;
+// Pre: n is the number of generated points
+// Returns an approximation of  using n random points
+double approx_pi(int n)
+{
+int nin = 0;
+double randmax = double(RAND_MAX);
+for (int i = 0; i < n; ++i) {
+double x = rand()/randmax;
+double y = rand()/randmax;
+if (x*x + y*y < 1.0) nin = nin + 1;
+}
+cout<<4.0*nin/n;
+return 4.0*nin/n;
+}
+int main()
+{
+int n;
+cin>>n;
+approx_pi(n);
+ return 0;
+}
