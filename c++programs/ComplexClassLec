@@ -1,0 +1,105 @@
+//author:ash
+//topic:complex no
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class teacher
+{
+ public:
+  int name;
+  int subject;
+
+ private:
+  int age;
+  bool marital_status_married;
+  bool likes_teaching;
+
+ protected:
+
+ void speak(){}
+ void listen(){}
+ void answer(){}
+};
+class student
+{
+ public:
+  string name;
+  int age;
+  int height;
+  int weight;
+
+ private:
+ protected:
+
+
+
+};
+
+//complex no s
+class complex
+{
+ public:
+  int real;
+  int imag;
+  void input()
+  {
+   cout<<"Enter value of real:";
+   cin>>real;
+   cout<<"Enter value of Imag:";
+   cin>>imag;
+  }
+  void modulu()
+  {
+   float mod=pow(real*real+imag*imag,0.5);
+   cout<<mod<<endl;
+  }
+  void display()
+  {
+   cout<<real<<"+i"<<imag<<endl;
+  }
+  void setdata(int r,int i)
+  {
+   real=r;
+   imag=i;
+
+  }
+ private:
+ protected:
+
+};
+int main()
+{
+
+ complex c1,c2,c3;
+ c1.real;//
+ c1.imag;
+ c1.input();
+ c1.display();
+ c1.modulu();
+ int a;
+ a=20;
+ c1.setdata(3,4);
+ c1.display();
+ c1.modulu();
+ return 0;
+}
+
+/*
+struct book.b;
+b.book title;
+b.price;
+b.no of pages;
+*/
+//using structures
+struct  book{
+ char booktitle[50];
+ float price;
+ int noofpages;
+};
+//using classes
+/*class book{
+ char booktitle[50];
+ float price;
+ int no of pages;
+}*/
