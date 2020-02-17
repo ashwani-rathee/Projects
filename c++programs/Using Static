@@ -1,0 +1,33 @@
+//author:ashwani
+//topic:using static
+//date:17-2
+//staic variable are usualyy called using staitci fucntions
+#include<iostream>
+using namespace std;
+class distance1
+{
+ private:
+ int km;
+ int m;
+ static int c;//this value will be same for all objects in this class
+ public:
+ void incr()
+ {
+  c=c+1;
+  }
+ void show()
+ {
+  cout<<c;
+ }
+};
+int distance1::c=0;
+int main()
+{
+ distance1 d1,d2;
+ d1.incr();
+ d1.show();
+ return 0;
+}
+
+//output
+1
