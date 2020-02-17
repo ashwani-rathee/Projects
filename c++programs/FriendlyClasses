@@ -1,0 +1,62 @@
+//auhtor:ashwani
+//topic:Accesing private mebers
+//making Friendly Function
+//17-2
+#include<iostream>
+using namespace std;
+//accessing dat of two classes and manipulating it by craeatin ganother functiona nd making those two classs
+//friend class
+void showvalue(Distance)
+{
+ showva;
+}
+
+void sum(Distance x,smalldistance y)
+{
+ km=x.km;
+ m=x.m+y.m;
+
+}
+class Distance{
+ int km;
+ int m;
+ friend void showvalue(Distance);
+ public:
+ friend void showvalue(Distance);
+ void input()
+ {
+ cout<<"Enter in km";
+ cin>>km;
+ cout<<"Enter in m";
+ cin>>m;
+ }
+ void display()
+ {
+  cout<<"KM: "<<km<<endl;
+  cout<<"M: "<<m<<endl;
+ }
+ void setdata(int r,int s)
+ {
+  km=r;
+  m=s;
+  display();
+ }
+ Distance sum(Distance x,Distance y)
+ {
+  km=x.km+y.km;
+  m=x.m+y.m;
+ }
+};
+class smalldistance{
+ private:
+ 
+
+}
+int main()
+{
+ Distance d1,d2,d3;
+ d1.setdata(10,20);
+ d2.input();
+ d3.sum(d1,d2);
+ return 0;
+}
