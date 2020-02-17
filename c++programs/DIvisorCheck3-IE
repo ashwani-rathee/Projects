@@ -1,0 +1,21 @@
+//author:ashwani
+//topic:divisor for 3
+//17-2
+#incldue<iostream>
+using namespace std;
+int main()
+{
+/*this logic works
+ int sum=0;
+ while(cin>>value)
+ {
+ sum=sum+value;
+ if(sum%3==0)
+ {
+  cout<<"This Number is divisible by 3"<<endl;
+ }
+ cout<<endl;
+ }
+ but isn't cute
+ */
+ }
