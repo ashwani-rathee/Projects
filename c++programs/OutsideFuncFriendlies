@@ -1,0 +1,59 @@
+//author:ashwani
+//topic:
+//17-2
+#include<iostream>
+using namespace std;
+class Distance{
+ private:
+ int km;
+ int m;
+ friend Distance addition(Distance x,Distance y);
+ public:
+
+ int retkm()
+ {
+ return km;
+ }
+
+ int retm()
+ {
+ return m;
+ }
+ void input()
+ {
+ cout<<"Enter in km";
+ cin>>km;
+ cout<<"Enter in m";
+ cin>>m;
+ }
+ void display()
+ {
+  cout<<"KM: "<<km<<endl;
+  cout<<"M: "<<m<<endl;
+ }
+ void setdata(int r,int s)
+ {
+  km=r;
+  m=s;
+  display();
+ }
+
+};
+Distance addition(Distance x,Distance y)
+{
+ Distance t;
+ t.km=x.km+y.km;
+ t.m=x.m+y.m;
+ return t;
+}
+int main()
+{
+ Distance d1,d2,d3;
+ d1.setdata(10,20);
+ d2.setdata(10,20);
+ d3=addition(d1,d2);
+ d3.display();
+ return 0;
+}
+
+
