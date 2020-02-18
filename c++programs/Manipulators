@@ -1,0 +1,26 @@
+//author:ashwani
+//topic:manipulators
+//18-2
+#include<iostream>
+#include<iomanip>
+
+using namespace std;
+int main()
+{
+ float x=2.21321;
+ cout<<x<<endl;
+ cout<<setw(5)<<x<<endl;//123/10 is then printed
+ //cout<<getw(5)<<x<<endl;//this doesn't work
+ //cout<<setp(7)<<x<<endl;//this doesn't work
+ //cout<<x<<setprecision(3)<<endl;//this doesn't work
+ cout<<setprecision(3)<<x<<endl;
+
+ return 0;
+}
+
+//output
+2.21321
+2.21321
+2.21321
+2.213
+
