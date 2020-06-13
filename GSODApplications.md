@@ -1,7 +1,7 @@
 ##Technical writing experience
 My Blog Posts
-and My tutorials
-and link to the idea of google colab
+My tutorials
+Link to the idea of graphs of google colab
 
 ##Project proposal
 Open source organization name: Bokeh
